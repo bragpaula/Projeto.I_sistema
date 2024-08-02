@@ -1,6 +1,7 @@
 # Projeto.I_sistema
 
 INTRODUÇÃO
+
 O APSO é uma iniciativa inovadora projetada para conectar
 organizações não governamentais (ONGs) e voluntários em uma
 plataforma colaborativa e eficiente. Nosso objetivo é facilitar a
@@ -8,6 +9,7 @@ integração entre aqueles que precisam de apoio e aqueles dispostos a
 oferecer seu tempo e habilidades para causas sociais importantes.
 
 ESCOPO DO PROJETO
+
 inclui o desenvolvimento de um site
 que permita a criação de perfis, tanto de ONGs
 quanto de voluntários, verificando as identidades e
