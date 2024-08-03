@@ -34,3 +34,5 @@ Outra exclusão é a ausência de consultoria legal ou
 financeira. O projeto não terá como objetivo oferecer
 suporte especializado nessas áreas, concentrando-se
 apenas na facilitação de conexões e doações.
+
+LINK FIGMA: https://www.figma.com/design/YA9LhJD21t3QoRuEf5OdyS/APSO---Interfaces?node-id=0-1&t=vTK4aW5vfKFdj04G-1
