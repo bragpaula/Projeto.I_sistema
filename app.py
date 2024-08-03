@@ -30,6 +30,10 @@ def campanhas():
 def doar():
     return render_template('doar.html')
 
+@app.route('/voluntario')
+def voluntario():
+    return render_template('voluntario.html')
+
 @app.route('/cadastrarongs')
 def cadastrarongs():
     return render_template('cadastrarongs.html')
