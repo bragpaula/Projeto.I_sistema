@@ -35,5 +35,5 @@ def cadastrarongs():
     return render_template('cadastrarongs.html')
 
 
-if __name__ == __main__:
+if __name__ == '__main__':
     app.run()
