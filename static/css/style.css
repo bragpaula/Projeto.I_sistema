@@ -1,0 +1,54 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+header{
+    width: 100vw;
+    height: 90px;
+    display: flex;
+    justify-content: center;
+}
+.org{
+    width: 1100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+a{
+    color: var(--neutras-Gray, #8D9AA6);
+    font-family: Raleway;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    text-transform: capitalize;  
+    text-decoration: none;
+}
+button{
+    border-radius: 10px;
+    background: #F19430; 
+    color: #0C4972;
+    font-family: Raleway;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    border: 0;
+    padding: 10px 30px;
+}
+nav{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+.bt{
+    display: flex;
+    gap: 10px;
+}
+h1{
+    color: var(--neutras-White, #FFF);
+    font-family: Rubik;
+    font-size: 52px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 100%; /* 52px */
+    text-transform: uppercase;
+}
