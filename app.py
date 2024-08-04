@@ -17,7 +17,7 @@ def acessoverific():
     usuario = request.form['usuario']
     senha = request.form['senha']
     if usuario == 'Jepale' and senha == 'apso1234':
-        return 'Bem-vindo ao APSO!'
+        return redirect(url_for('index'))
     else: 
         flash('login ou senha inválidos')
         flash('Tente novamente')
