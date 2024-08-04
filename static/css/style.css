@@ -33,6 +33,7 @@ button{
     font-weight: 700;
     border: 0;
     padding: 10px 30px;
+    cursor: pointer;
 }
 nav{
     display: flex;
@@ -51,4 +52,74 @@ h1{
     font-weight: 700;
     line-height: 100%; /* 52px */
     text-transform: uppercase;
+    width: 449px;
+    margin-bottom: 10px;
+}
+.text-prin p{
+    color: var(--neutras-Neve, #FFF);
+    font-family: "Roboto Flex";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;   
+    width: 380px;
+}
+.text-prin p span{
+    color: var(--neutras-Neve, #FFC82C);
+}
+.bloco{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+.textinho h2{
+    color: var(--neutras-Fumaca, #E0E7ED);
+    font-family: Raleway;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 100%; /* 18px */
+    margin-bottom: 12px;
+}
+.textinho p{
+    color: var(--neutras-Fumaca, #E0E7ED);
+    font-family: Raleway;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%; /* 19.6px */
+}
+.quadrado{
+    width: 410px;
+    height: 514px;
+    flex-shrink: 0;
+    opacity: 0.8;
+    background: linear-gradient(180deg, #002742 27.81%, rgba(17, 17, 17, 0.00) 92.2%);
+    display: flex;
+    justify-content: center;
+}
+.org-quad{
+    display: flex;
+    flex-direction: column;
+    gap: 27px;
+    width: 320px;
+    justify-content: center;
+}
+
+.principal{
+    width: 100vw;
+    height:680px;
+    background-image:  url('../img/Group\ 72.png');
+    display: flex;
+    justify-content: center;
+}
+.principal .org{
+    width: 1100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+.logo img{
+    height: 190px;
 }
