@@ -8,6 +8,10 @@ app.config['SECRET_KEY'] = 'sua-palavra-secreta'
 def index():
     return render_template('index.html')
 
+@app.route('/index2')
+def index2():
+    return render_template('index2.html')
+
 @app.route('/login')
 def login():
     return render_template('login.html')
@@ -17,7 +21,7 @@ def acessoverific():
     usuario = request.form['usuario']
     senha = request.form['senha']
     if usuario == 'Jepale' and senha == 'apso1234':
-        return redirect(url_for('index'))
+        return redirect(url_for('index2'))
     else: 
         flash('login ou senha inválidos')
         flash('Tente novamente')
