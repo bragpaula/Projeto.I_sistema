@@ -1,6 +1,8 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, redirect, url_for, request, flash
 
 app = Flask(__name__)
+app.config['SECRET_KEY'] = 'sua-palavra-secreta'
+
 
 @app.route('/')
 def index():
@@ -9,6 +11,17 @@ def index():
 @app.route('/login')
 def login():
     return render_template('login.html')
+
+@app.route('/acessoverific', methods=['POST'])
+def acessoverific():
+    usuario = request.form['usuario']
+    senha = request.form['senha']
+    if usuario == 'Jepale' and senha == 'apso1234':
+        return 'Bem-vindo ao APSO!'
+    else: 
+        flash('login ou senha inválidos')
+        flash('Tente novamente')
+    return redirect(url_for('login'))
 
 @app.route('/sobrenos')
 def sobrenos():
@@ -34,9 +47,9 @@ def doar():
 def voluntario():
     return render_template('voluntario.html')
 
-@app.route('/cadastro')
+@app.route('/cadastrarongs')
 def cadastrarongs():
-    return render_template('cadastro.html')
+    return render_template('cadastrarongs.html')
 
 
 if __name__ == '__main__':
