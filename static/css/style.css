@@ -23,6 +23,16 @@ a{
     text-transform: capitalize;  
     text-decoration: none;
 }
+header a:hover{
+    color: #0C4972;
+    transform: scale(1.0);
+    transition: 0.8s;
+}
+nav button:hover{
+    box-shadow: 0px 0px 12px #1b272f;
+    transform: scale(1.0);
+    transition: 0.8s;
+}
 button{
     border-radius: 10px;
     background: #F19430; 
@@ -109,7 +119,7 @@ h1{
 .principal{
     width: 100vw;
     height:680px;
-    background-image:  url('../img/Group\ 72.png');
+    background-image: url(imgs/Group\ 72.png);
     display: flex;
     justify-content: center;
 }
@@ -122,4 +132,9 @@ h1{
 }
 .logo img{
     height: 190px;
+}
+.principal button:hover{
+    box-shadow: 0px 0px 12px #002742;
+    transform: scale(1.0);
+    transition: 1s;
 }
