@@ -212,3 +212,68 @@ h1{
     font-style: normal;
     font-weight: 500;
 }
+/*pagina de cadastro*/
+.cadastro h2{
+    color: #0C4972;
+    text-align: center;
+    font-family: Rubik;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 100%; /* 36px */
+    text-transform: uppercase;
+    margin-bottom: 30px;
+    width: 295px;
+}
+.cadastro{
+    display: flex;
+    align-items: center;
+}
+.bt-cadastro{
+    width: 295px;
+    height: 41px;
+    flex-shrink: 0;
+    border-radius: 10px;
+    background: #F19430; 
+    color: #0C4972;
+    font-family: Raleway;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    border: 0;
+    padding: 10px 30px;
+    cursor: pointer;
+    margin-top: 30px;
+
+}
+.bt-cadastro:hover{
+    box-shadow: 0px 0px 12px #1b272f;
+    transform: scale(1.0);
+    transition: 0.8s;
+}
+.cadastro .campo{
+    border-radius: 10px;
+    border: 2px solid #0C4972;
+    background: #FFF;
+    width: 295px;
+    height: 33px;
+    flex-shrink: 0;
+}
+.cadastro label{
+    color: #0C4972;
+    font-family: Rubik;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 140%; /* 22.4px */
+}
+.cadastro form{
+    display: flex;
+    flex-direction: column;
+}
+.text-cad{
+    margin-left: 180px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}

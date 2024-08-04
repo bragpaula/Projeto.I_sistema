@@ -34,9 +34,9 @@ def doar():
 def voluntario():
     return render_template('voluntario.html')
 
-@app.route('/cadastrarongs')
+@app.route('/cadastro')
 def cadastrarongs():
-    return render_template('cadastrarongs.html')
+    return render_template('cadastro.html')
 
 
 if __name__ == '__main__':
