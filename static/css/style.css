@@ -3,7 +3,7 @@
     padding: 0;
 }
 header{
-    width: 100vw;
+    width: 99vw;
     height: 90px;
     display: flex;
     justify-content: center;
@@ -20,7 +20,6 @@ a{
     font-size: 16px;
     font-style: normal;
     font-weight: 700;
-    text-transform: capitalize;  
     text-decoration: none;
 }
 header a:hover{
@@ -137,4 +136,79 @@ h1{
     box-shadow: 0px 0px 12px #002742;
     transform: scale(1.0);
     transition: 1s;
+}
+
+/*pagina de login*/
+.login h2{
+    color: #0C4972;
+    text-align: center;
+    font-family: Rubik;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 100%; /* 36px */
+    text-transform: uppercase;
+    margin-bottom: 30px;
+}
+.login{
+    display: flex;
+    align-items: center;
+}
+.bt-login{
+    width: 295px;
+    height: 41px;
+    flex-shrink: 0;
+    border-radius: 10px;
+    background: #F19430; 
+    color: #0C4972;
+    font-family: Raleway;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    border: 0;
+    padding: 10px 30px;
+    cursor: pointer;
+    margin-top: 30px;
+
+}
+.bt-login:hover{
+    box-shadow: 0px 0px 12px #1b272f;
+    transform: scale(1.0);
+    transition: 0.8s;
+}
+.login .campo{
+    border-radius: 10px;
+    border: 2px solid #0C4972;
+    background: #FFF;
+    width: 295px;
+    height: 33px;
+    flex-shrink: 0;
+}
+.login label{
+    color: #0C4972;
+    font-family: Rubik;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 140%; /* 22.4px */
+}
+.login form{
+    display: flex;
+    flex-direction: column;
+}
+.text-login{
+    margin-left: 160px;
+}
+.login p{
+    color: #002742;
+    font-family: "Roboto Flex";
+    font-style: normal;
+    font-weight: 500;
+    margin-top: 10px;
+}
+.login a{
+    color: #F19430;
+    font-family: "Roboto Flex";
+    font-style: normal;
+    font-weight: 500;
 }
