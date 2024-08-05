@@ -304,5 +304,69 @@ h1{
     align-items: center;
 }
 .text-ongs h2{
-    font-size: 26px; 
+    font-size: 26px;
+    margin-bottom: 10px; 
+}
+.text-ongs li h2{
+    font-size: 20px; 
+    text-decoration: none;
+}
+.text-ongs li p{
+    color: #002742;
+    font-family: "Roboto Flex";
+    font-style: normal;
+    font-weight: 500;
+    text-decoration: none;
+}
+.text-ongs li{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/*sobre nos*/
+.sobrenos{
+    display: flex;
+    align-items: center;
+    width: 1100px;
+    justify-content: space-between;
+}
+.main-sobre{
+    display: flex;
+    justify-content: center;
+}
+
+.sobrenos p{
+    color: #002742;
+    font-family: "Roboto Flex";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    width: 520px;
+}
+.sobrenos h2{
+    color: #0C4972;
+    font-family: Rubik;
+    font-size: 52px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 100%; /* 52px */
+    text-transform: uppercase;
+    margin-bottom: 30px;
+}
+.blog{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.blog h2{
+    color: #0C4972;
+    font-family: Rubik;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 100%; /* 52px */
+    text-transform: uppercase;
+    margin-top: 80px;
 }
