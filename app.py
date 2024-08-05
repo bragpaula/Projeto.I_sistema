@@ -3,6 +3,12 @@ from flask import Flask, render_template, redirect, url_for, request, flash
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'sua-palavra-secreta'
 
+ongs = [
+        {"nome": "Unidos pelo bem", "descricao": "Campanha de soliedariedade"},
+        {"nome": "Mãos atadas", "descricao": "Dando cordas por ai"},
+        {"nome": "Uniau", "descricao": "Ong que ajuda cachorros vira-lata"}
+    ]
+
 def salvar_dados(tipo, nome, username, email, password, telefone, bairro):
     with open('dados.txt', 'a') as f:
         f.write(f'{tipo},{nome},{username},{email},{password},{telefone},{bairro}\n')
@@ -11,6 +17,10 @@ def salvar_dados(tipo, nome, username, email, password, telefone, bairro):
 @app.route('/')
 def index():
     return render_template('index.html')
+
+@app.route('/ongs')
+def lista_ongs():
+    return render_template('ongs.html', ongs=ongs)
 
 @app.route('/index2')
 def index2():
@@ -68,6 +78,7 @@ def cadastro():
         salvar_dados(tipo, nome, username, email, password, telefone, bairro)
         return redirect(url_for('login'))
     return render_template('cadastro.html')
+
     
 
 if __name__ == '__main__':

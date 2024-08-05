@@ -277,3 +277,32 @@ h1{
     flex-direction: column;
     align-items: center;
 }
+
+/*estilização ongs*/
+.ongs h2{
+    color: #0C4972;
+    text-align: center;
+    font-family: Rubik;
+    font-size: 26px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 100%; /* 36px */
+    text-transform: uppercase;
+    margin-bottom: 30px;
+    width: 295px;
+}
+.ongs{
+    display: flex;
+    align-items: center;
+}
+
+.text-ongs{
+    margin-left: 180px;
+    max-width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.text-ongs h2{
+    font-size: 26px; 
+}
