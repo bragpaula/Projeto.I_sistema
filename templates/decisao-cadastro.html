@@ -36,18 +36,18 @@
                 <img src="static/img/foto login.png" alt="">
             </div>
             <div class="text-cad">
-                <h2>
-                    Faça seu cadastro
-                </h2>
-                <form action="/cadastro" method="POST">
+                <h2>Faça seu cadastro</h2>
+                <form action="/decisao-cadastro" method="POST">
                     <label for="tipo">Eu sou:</label>
                     <select class="campo tipo" id="tipo" name="tipo" required>
                         <option value="voluntario">Voluntário</option>
                         <option value="ong">ONG</option>
                     </select>
-        
                     <input class="bt-cadastro" type="submit" value="Próximo">
                 </form>
+                {% if error %}
+                <p style="color: red;">{{ error }}</p>
+                {% endif %}
             </div>
         </section>
     </main>

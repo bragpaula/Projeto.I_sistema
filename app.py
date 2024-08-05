@@ -22,6 +22,17 @@ def index():
 def lista_ongs():
     return render_template('ongs.html', ongs=ongs)
 
+@app.route('/decisao-cadastro', methods=['GET', 'POST'])
+def decisao_cadastro():
+    if request.method == 'POST':
+        tipo = request.form.get('tipo')
+        if tipo == 'voluntario':
+            return render_template('cadastro-voluntario.html')
+        elif tipo =='ong':
+            return render_template('cadastro-ong.html')
+            
+    return render_template('decisao-cadastro.html')
+
 @app.route('/cadastro-ong', methods=['GET', 'POST'])
 def cadastro_ong():
     if request.method == 'POST':
@@ -36,15 +47,22 @@ def cadastro_ong():
     
     return render_template('cadastro-ong.html')
 
-@app.route('/cadastrovolun', methods=['GET''POST'])
-def cadastrovolun():
+@app.route('/cadastro-voluntario', methods=['GET''POST'])
+def cadastro_voluntario():
     if request.method == 'POST':
         nome = request.form['nome']
-        descricao = request.form['descricao']
+        username = request.form['username']
+        email = request.form['email']
+        password = request.form['password']
+        telefone = request.form['telefone']
+        bairro = request.form['bairro']
+        salvar_dados( nome, username, email, password, telefone, bairro)
 
-        ongs.append({"nome": nome, "descricao":  descricao})
+        return redirect(url_for('index'))
+    return render_template('cadastro-voluntario.html')
 
-        return redirect(url_for('lista_ongs'))
+@app.route('/cadastro', methods= ['POST'])
+def cadastro():
     return render_template('cadastro.html')
 
 @app.route('/index2')
@@ -90,21 +108,9 @@ def doar():
 def voluntario():
     return render_template('voluntario.html')
 
-@app.route('/cadastro', methods=['GET', 'POST'])
-def cadastro():
-    if request.method == 'POST':
-        tipo = request.form['tipo']
-        nome = request.form['nome']
-        username = request.form['username']
-        email = request.form['email']
-        password = request.form['password']
-        telefone = request.form['telefone']
-        bairro = request.form['bairro']
-        salvar_dados(tipo, nome, username, email, password, telefone, bairro)
-        return redirect(url_for('login'))
-    return render_template('cadastro.html')
+
 
     
 
 if __name__ == '__main__':
-    app.run()
+    app.run(debug=True)
