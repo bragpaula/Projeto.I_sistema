@@ -3,6 +3,10 @@ from flask import Flask, render_template, redirect, url_for, request, flash
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'sua-palavra-secreta'
 
+def salvar_dados(tipo, nome, username, email, password, telefone, bairro):
+    with open('dados.txt', 'a') as f:
+        f.write(f'{tipo},{nome},{username},{email},{password},{telefone},{bairro}\n')
+
 
 @app.route('/')
 def index():
@@ -51,10 +55,20 @@ def doar():
 def voluntario():
     return render_template('voluntario.html')
 
-@app.route('/cadastrarongs')
-def cadastrarongs():
-    return render_template('cadastrarongs.html')
-
+@app.route('/cadastro', methods=['GET', 'POST'])
+def cadastro():
+    if request.method == 'POST':
+        tipo = request.form['tipo']
+        nome = request.form['nome']
+        username = request.form['username']
+        email = request.form['email']
+        password = request.form['password']
+        telefone = request.form['telefone']
+        bairro = request.form['bairro']
+        salvar_dados(tipo, nome, username, email, password, telefone, bairro)
+        return redirect(url_for('login'))
+    return render_template('cadastro.html')
+    
 
 if __name__ == '__main__':
     app.run()
