@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login na APSO</title>
+    <title>Lista de ONGs</title>
     <link rel="stylesheet" href="static/css/style.css">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -20,7 +20,7 @@
                 <a href="/sobrenos">SOBRE NÓS</a>
                 <a href="/blog">BLOG</a>
                 <a href="/doacoes">DOAÇÕES</a>
-                <a href="/campanhas">CAMPANHAS</a>
+                <a href="campanhas">CAMPANHAS</a>
                 <div class="bt">
                     <a href="/doar">
                         <button>DOAR</button>
@@ -31,21 +31,23 @@
     </header>
     <main>
         <section class="ongs">
-            <div class="img">
-                <img src="static/img/foto login.png" alt="">
-            </div>
-            <div class="text-ongs">
-                <h2>
-                    ONGs disponíveis para você se voluntariar
-                </h2>
-                <ul>
-                    {% for ong in ongs %}
-                        <li>
-                            <h2>{{ ong.nome }}</h2>
-                            <p>{{ ong.descricao }}</p>
-                        </li>
-                    {% endfor %}
-                </ul>
+            <div class="org-ongs">
+                <div class="text-ongs">
+                    <h2>ongs cadastradas na <span>APSO</span>!</h2>
+                    <img src="static/img/Arrow 1.png" alt="">
+                </div>
+                <div class="quadrado">
+                    <div class="org-quad">
+                        <ul>
+                            {% for ong in ongs %}
+                                <li class="textinho">
+                                    <h2>{{ ong.nomeong }}</h2>
+                                    <p>{{ ong.descricao }}</p>
+                                </li>
+                            {% endfor %}
+                        </ul>
+                    </div><!--org-quad-->
+                </div><!--quadrado-->
             </div>
         </section>
     </main>

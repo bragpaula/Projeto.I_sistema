@@ -4,9 +4,9 @@ app = Flask(__name__)
 app.config['SECRET_KEY'] = 'sua-palavra-secreta'
 
 ongs = [
-        {"nome": "Unidos pelo bem", "descricao": "Campanha de soliedariedade"},
-        {"nome": "Mãos atadas", "descricao": "Dando cordas por ai"},
-        {"nome": "Uniau", "descricao": "Ong que ajuda cachorros vira-lata"}
+        {"nomeong": "Casa Do Bem", "descricao": "A Casa do Bem desenvolve ações humanitárias sociais através da educação, esporte, lazer, cultura e cidadania."},
+        {"nomeong": "Mãos Atadas", "descricao": "A Casa do Bem desenvolve ações humanitárias sociais através da educação, esporte, lazer, cultura e cidadania."},
+        {"nomeong": "Instituto Uniau", "descricao": "A Casa do Bem desenvolve ações humanitárias sociais através da educação, esporte, lazer, cultura e cidadania."}
     ]
 
 def salvar_dados(tipo, nome, username, email, password, telefone, bairro):
@@ -36,11 +36,11 @@ def decisao_cadastro():
 @app.route('/cadastro-ong', methods=['GET', 'POST'])
 def cadastro_ong():
     if request.method == 'POST':
-        nome = request.form['nome-ong']
+        nomeong = request.form['nomeong']
         descricao = request.form['descricao']
         
         # Adiciona a nova ONG à lista
-        ongs.append({"nome-ong": nome, "descricao": descricao})
+        ongs.append({"nomeong": nomeong, "descricao": descricao})
         
         # Redireciona para a lista de ONGs
         return redirect(url_for('lista_ongs'))
@@ -61,9 +61,6 @@ def cadastro_voluntario():
         return redirect(url_for('index'))
     return render_template('cadastro-voluntario.html')
 
-@app.route('/cadastro', methods= ['POST'])
-def cadastro():
-    return render_template('cadastro.html')
 
 @app.route('/index2')
 def index2():

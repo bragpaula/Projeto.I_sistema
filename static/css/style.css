@@ -281,48 +281,68 @@ h1{
 /*estilização ongs*/
 .ongs h2{
     color: #0C4972;
-    text-align: center;
     font-family: Rubik;
-    font-size: 26px;
+    font-size: 48px;
     font-style: normal;
     font-weight: 700;
-    line-height: 100%; /* 36px */
+    line-height: 100%; /* 48px */
     text-transform: uppercase;
-    margin-bottom: 30px;
-    width: 295px;
+}
+.ongs span{
+    color: #1A9DBD;
 }
 .ongs{
     display: flex;
     align-items: center;
+    justify-content: center;
 }
-
+.ongs .quadrado{
+    width: 470px;
+    height: 484px;
+    background: #002742;
+    opacity: 100%;
+}
+.org-ongs{
+    display: flex;
+    justify-content: space-between;
+    width: 1100px;
+}
 .text-ongs{
-    margin-left: 180px;
     max-width: 300px;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items:flex-start;
+    justify-content: center;
+    gap: 30px;
+
 }
-.text-ongs h2{
-    font-size: 26px;
-    margin-bottom: 10px; 
-}
-.text-ongs li h2{
-    font-size: 20px; 
-    text-decoration: none;
-}
-.text-ongs li p{
-    color: #002742;
-    font-family: "Roboto Flex";
+.quadrado li h2{
+    color: var(--neutras-Fumaca, #E0E7ED);
+    font-family: Raleway;
+    font-size: 18px;
+    margin-bottom: 5px;
     font-style: normal;
-    font-weight: 500;
-    text-decoration: none;
+    font-weight: 700;
+    line-height: 100%; /* 18px */
+}
+.quadrado li p{
+    color: var(--neutras-Fumaca, #E0E7ED);
+    font-family: Raleway;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%; /* 19.6px */
+    margin-bottom: 28px;
 }
 .text-ongs li{
     display: flex;
     flex-direction: column;
     align-items: center;
 }
+ul{
+    list-style: none;
+}
+
 
 /*sobre nos*/
 .sobrenos{
