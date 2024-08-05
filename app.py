@@ -22,6 +22,17 @@ def index():
 def lista_ongs():
     return render_template('ongs.html', ongs=ongs)
 
+@app.route('/cadastrovolun', methods=['GET''POST'])
+def cadastrovolun():
+    if request.method == 'POST':
+        nome = request.form['nome']
+        descricao = request.form['descricao']
+
+        ongs.append({"nome": nome, "descricao":  descricao})
+
+        return redirect(url_for('lista_ongs'))
+    return render_template('cadastro.html')
+
 @app.route('/index2')
 def index2():
     return render_template('index2.html')
