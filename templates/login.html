@@ -37,9 +37,22 @@
                 <img src="static/img/foto login.png" alt="">
             </div>
             <div class="text-login">
-                <h2>
-                    Faça seu login
-                </h2>
+                <h2>Faça seu login</h2>
+
+                <!-- Flash messages -->
+                {% with messages = get_flashed_messages() %}
+                    {% if messages %}
+                        <div class="flash-messages">
+                            {% for message in messages %}
+                                <div class="alert alert-warning">
+                                    {{ message }}
+                                </div>
+                            {% endfor %}
+                        </div>
+                    {% endif %}
+                {% endwith %}
+                <!-- Fim das flash messages -->
+
                 <form action="{{url_for('acessoverific')}}" method="POST">
                     <label for="usuario">Usuário</label>
                     <input class="campo" type="text" id="usuario" name="usuario" required>

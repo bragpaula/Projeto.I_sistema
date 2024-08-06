@@ -47,7 +47,7 @@ def cadastro_ong():
     
     return render_template('cadastro-ong.html')
 
-@app.route('/cadastro-voluntario', methods=['GET''POST'])
+@app.route('/cadastro-voluntario', methods=['GET','POST'])
 def cadastro_voluntario():
     if request.method == 'POST':
         nome = request.form['nome']
@@ -77,8 +77,7 @@ def acessoverific():
     if usuario == 'Jepale' and senha == 'apso1234':
         return redirect(url_for('index2'))
     else: 
-        flash('login ou senha inválidos')
-        flash('Tente novamente')
+        flash('Login ou senha inválidos')
     return redirect(url_for('login'))
 
 @app.route('/sobrenos')
