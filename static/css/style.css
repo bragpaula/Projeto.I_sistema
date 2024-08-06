@@ -390,3 +390,28 @@ ul{
     text-transform: uppercase;
     margin-top: 80px;
 }
+
+/*campanhas*/
+.campanhas{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding-top: 130px;
+}
+
+.main-campanhas{
+    text-align: center;
+}
+
+
+.campanhas h2{
+    color: #0C4972;
+    font-family: Rubik;
+    font-size: 59px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 100%; /* 52px */
+    text-transform: uppercase;
+    margin-bottom: 30px;
+    text-align: center;}
