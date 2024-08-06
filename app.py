@@ -18,10 +18,7 @@ def salvar_dados(tipo, nome, username, email, password, telefone, bairro):
 def index():
     return render_template('index.html')
 
-@app.route('/ongs')
-def lista_ongs():
-    return render_template('ongs.html', ongs=ongs)
-
+#cadastro
 @app.route('/decisao-cadastro', methods=['GET', 'POST'])
 def decisao_cadastro():
     if request.method == 'POST':
@@ -39,13 +36,14 @@ def cadastro_ong():
         nomeong = request.form['nomeong']
         descricao = request.form['descricao']
         
-        # Adiciona a nova ONG à lista
         ongs.append({"nomeong": nomeong, "descricao": descricao})
         
-        # Redireciona para a lista de ONGs
         return redirect(url_for('lista_ongs'))
-    
     return render_template('cadastro-ong.html')
+
+@app.route('/ongs')
+def lista_ongs():
+    return render_template('ongs.html', ongs=ongs)
 
 @app.route('/cadastro-voluntario', methods=['GET','POST'])
 def cadastro_voluntario():
@@ -62,10 +60,8 @@ def cadastro_voluntario():
     return render_template('cadastro-voluntario.html')
 
 
-@app.route('/index2', methods=['GET','POST'])
-def index2():
-    return render_template('index2.html')
 
+#login e verificação do acesso
 @app.route('/login')
 def login():
     return render_template('login.html')
@@ -80,6 +76,11 @@ def acessoverific():
         flash('Login ou senha inválidos')
     return redirect(url_for('login'))
 
+@app.route('/index2', methods=['GET','POST'])
+def index2():
+    return render_template('index2.html')
+
+#demais rotas
 @app.route('/sobrenos')
 def sobrenos():
     return render_template('sobrenos.html')
@@ -100,13 +101,7 @@ def campanhas():
 def doar():
     return render_template('doar.html')
 
-@app.route('/voluntario')
-def voluntario():
-    return render_template('voluntario.html')
 
-
-
-    
 
 if __name__ == '__main__':
     app.run(debug=True)

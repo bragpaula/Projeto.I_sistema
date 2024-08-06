@@ -39,7 +39,7 @@
             <div class="text-login">
                 <h2>Faça seu login</h2>
 
-                <!-- Flash messages -->
+                <!-- flash messages -->
                 {% with messages = get_flashed_messages() %}
                     {% if messages %}
                         <div class="flash-messages">
@@ -51,7 +51,7 @@
                         </div>
                     {% endif %}
                 {% endwith %}
-                <!-- Fim das flash messages -->
+                <!-- fim das flash messages -->
 
                 <form action="{{url_for('acessoverific')}}" method="POST">
                     <label for="usuario">Usuário</label>
