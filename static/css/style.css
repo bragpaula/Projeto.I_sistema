@@ -433,4 +433,31 @@ ul{
     margin-bottom: 0;
 }
 
+/*estilizaçao de doaçoes*/
+.main-doacoes {
+    display: flex;
+    justify-content: center;
+}
+
+.doaçoes {
+    width: 1100px;
+}
+
+.doaçoes h2 {
+    color: #0C4972;
+    font-family: Rubik;
+    font-size: 53px;
+    font-style: normal;
+    font-weight: 700px;
+    line-height: 100%;
+    /* 52px */
+    text-transform: uppercase;
+    margin-bottom: 30px;
+    flex-direction: column;
+    width: 280px;
+}
+.doaçoes button{
+    padding: 10px 30px;
+}
+
 
