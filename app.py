@@ -62,7 +62,7 @@ def cadastro_voluntario():
     return render_template('cadastro-voluntario.html')
 
 
-@app.route('/index2')
+@app.route('/index2', methods=['GET','POST'])
 def index2():
     return render_template('index2.html')
 
